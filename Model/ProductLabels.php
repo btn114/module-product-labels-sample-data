@@ -160,7 +160,7 @@ class ProductLabels
         unset($data['rule_id']);
 
         if ($data['label_image']) {
-            $data['label_image'] = $this->copyImage($data['label_image']);
+            $this->copyImage($data['label_image']);
         }
 
         return $data;
