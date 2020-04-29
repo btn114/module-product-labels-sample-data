@@ -34,17 +34,17 @@ class Installer implements Setup\SampleData\InstallerInterface
     /**
      * @var ProductLabels
      */
-    private $abandonedCart;
+    private $productLabels;
 
     /**
      * Installer constructor.
      *
-     * @param ProductLabels $abandonedCart
+     * @param ProductLabels $productLabels
      */
     public function __construct(
-        ProductLabels $abandonedCart
+        ProductLabels $productLabels
     ) {
-        $this->abandonedCart = $abandonedCart;
+        $this->productLabels = $productLabels;
     }
 
     /**
@@ -53,6 +53,6 @@ class Installer implements Setup\SampleData\InstallerInterface
      */
     public function install()
     {
-        $this->abandonedCart->install(['Mageplaza_ProductLabelsSampleData::fixtures/mageplaza_productlabels_rule.csv']);
+        $this->productLabels->install(['Mageplaza_ProductLabelsSampleData::fixtures/mageplaza_productlabels_rule.csv']);
     }
 }
